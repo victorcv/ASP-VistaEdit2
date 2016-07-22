@@ -1,0 +1,32 @@
+﻿@model Internet_Application.Models.UserViewModel
+
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@{Html.EnableClientValidation();}
+@using (Html.BeginForm())
+{
+
+<fieldset>
+
+@Html.EditorFor(model => model)
+
+<input type="submit" value="Submit" />
+
+</fieldset>
+
+    <!---->
+}
+@section scripts {
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+
+}

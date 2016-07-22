@@ -1,0 +1,12 @@
+﻿@model int 
+@{ 
+    IEnumerable<Internet_Application.Models.UserType> userTypes = ViewBag.UserTypes;
+    var listItems = from s in userTypes
+                    select new SelectListItem()
+                    {
+                        Text = s.Name,
+                        Value = s.Id.ToString(),
+                        Selected = Model == s.Id
+                    };
+}
+@Html.DropDownList("", listItems)

@@ -1,0 +1,10 @@
+﻿@model DateTime
+
+@Html.TextBoxFor(m => m,"{0:d}", new { maxlenght = 10})
+    (mm/dd/yyyy)
+
+<script type="text/javascript">
+    $(function () {
+        $("#@Html.IdForModel()").datepicker();
+    });
+</script>
